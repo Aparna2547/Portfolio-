@@ -8,10 +8,10 @@ export default function ProfileImage() {
       <Image
         src="/profile.jpg"
         alt="Aparna"
-        width={450}
-        height={550}
+        width={400}
+        height={400}
         priority
-        className="relative rounded-3xl shadow-2xl object-cover"
+        className="relative h-80 w-80 rounded-3xl object-cover shadow-2xl md:h-[500px] md:w-[450px]"
       />
     </div>
   );

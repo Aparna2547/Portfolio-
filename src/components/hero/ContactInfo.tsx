@@ -2,7 +2,7 @@ import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
 export default function ContactInfo() {
   return (
-    <div className="mt-10 grid grid-cols-3 gap-4">
+    <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
       <div className="rounded-xl border bg-white p-4 shadow-sm">
         <MdEmail className="mb-2 text-2xl text-teal-600" />
         <p className="text-sm text-gray-500">Email</p>

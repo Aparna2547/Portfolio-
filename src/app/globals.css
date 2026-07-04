@@ -19,6 +19,9 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: linear-gradient(to right, #f8fafc, #ffffff);
