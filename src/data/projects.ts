@@ -3,7 +3,7 @@ import { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Portfolio Website",
+    title: "SVAIM – Health Centre Software Solution",
     description:
       "Personal portfolio built using Next.js, TypeScript and Tailwind CSS.",
     technologies: ["Next.js", "TypeScript", "Tailwind"],

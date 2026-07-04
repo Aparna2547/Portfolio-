@@ -1,25 +1,35 @@
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
-export default function ContactInfo() {
+export default function Contact() {
   return (
-    <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
-      <div className="rounded-xl border bg-white p-4 shadow-sm">
-        <MdEmail className="mb-2 text-2xl text-teal-600" />
-        <p className="text-sm text-gray-500">Email</p>
-        <p className="font-semibold">aparna@email.com</p>
+    <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+
+      {/* Email */}
+      <div className="flex items-center gap-3 rounded-full border bg-white px-5 py-3 shadow-sm">
+        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100">
+          <MdEmail className="text-gray-600" />
+        </div>
+        <p className="font-medium break-all">
+          manikandanaparna18@gmail.com
+        </p>
       </div>
 
-      <div className="rounded-xl border bg-white p-4 shadow-sm">
-        <MdPhone className="mb-2 text-2xl text-teal-600" />
-        <p className="text-sm text-gray-500">Phone</p>
-        <p className="font-semibold">+91 XXXXX XXXXX</p>
+      {/* Phone */}
+      <div className="flex items-center gap-3 rounded-full border bg-white px-5 py-3 shadow-sm">
+        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100">
+          <MdPhone className="text-gray-600" />
+        </div>
+        <p className="font-medium">+91 7736982547</p>
       </div>
 
-      <div className="rounded-xl border bg-white p-4 shadow-sm">
-        <MdLocationOn className="mb-2 text-2xl text-teal-600" />
-        <p className="text-sm text-gray-500">Location</p>
-        <p className="font-semibold">Bangalore, India</p>
+      {/* Location */}
+      <div className="flex items-center gap-3 rounded-full border bg-white px-5 py-3 shadow-sm">
+        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100">
+          <MdLocationOn className="text-gray-600" />
+        </div>
+        <p className="font-medium">Bangalore, India</p>
       </div>
+
     </div>
   );
 }

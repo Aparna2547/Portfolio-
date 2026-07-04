@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { FiDownload } from "react-icons/fi";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -17,60 +18,122 @@ const navLinks = [
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
-    <header className="sticky top-0 z-50 bg-white/80 shadow backdrop-blur-lg">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="#home" className="text-2xl font-bold">
+    <>
+      {/* ================= HEADER ================= */}
+      <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md">
+        <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
+          {/* Logo */}
+          <Link
+            href="#home"
+            className="text-2xl font-bold text-slate-900"
+          >
+            Aparna T
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-10">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="relative text-gray-700 font-medium transition hover:text-blue-600 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-blue-600 after:transition-all hover:after:w-full"
+              >
+                {link.name}
+              </Link>
+            ))}
+
+            <a
+              href="/Aparna_T.pdf"
+              download
+              className="flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-3 text-white hover:bg-slate-800 transition"
+            >
+              <FiDownload />
+              Resume
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            className="md:hidden text-slate-900"
+          >
+            <AiOutlineMenu size={30} />
+          </button>
+        </nav>
+      </header>
+
+      {/* ================= MOBILE MENU ================= */}
+      <div
+        className={`fixed inset-0 z-[999] transition-all duration-300 ${
+          isMenuOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible"
+        }`}
+      >
+        {/* Background Blur */}
+        <div
+          onClick={() => setIsMenuOpen(false)}
+          className="absolute inset-0 bg-white/70 backdrop-blur-md"
+        />
+
+        {/* Logo */}
+        <Link
+          href="#home"
+          onClick={() => setIsMenuOpen(false)}
+          className="absolute left-6 top-6 text-2xl font-bold text-slate-900 z-20"
+        >
           Aparna T
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
-          <ul className="flex gap-8">
-            {navLinks.map((link) => (
-              <li key={link.name}>
+        {/* Close Button */}
+        <button
+          onClick={() => setIsMenuOpen(false)}
+          className="absolute right-6 top-6 z-20"
+        >
+          <AiOutlineClose
+            size={34}
+            className="text-slate-900"
+          />
+        </button>
+
+        {/* Sidebar */}
+        <aside
+          className={`absolute right-0 top-0 h-full w-[320px] bg-white border-l border-gray-200 shadow-2xl transition-transform duration-300 ${
+            isMenuOpen
+              ? "translate-x-0"
+              : "translate-x-full"
+          }`}
+        >
+          <div className="pt-24 px-8 flex flex-col h-full">
+            {/* Links */}
+            <div className="flex flex-col gap-12">
+              {navLinks.map((link) => (
                 <Link
+                  key={link.name}
                   href={link.href}
-                  className="font-medium hover:text-blue-600 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-[20px] font-medium text-slate-900 hover:text-blue-600 transition"
                 >
                   {link.name}
                 </Link>
-              </li>
-            ))}
-          </ul>
-          <a
-            href="/resume.pdf"
-            download
-            className="rounded-lg bg-black px-4 py-2 text-white transition hover:bg-gray-800"
-          >
-            Resume
-          </a>
-        </div>
-
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isMenuOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white shadow-md md:hidden">
-            <ul className="flex flex-col items-center space-y-4 p-4">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <Link href={link.href} className="hover:text-blue-600" onClick={toggleMenu}>{link.name}</Link>
-                </li>
               ))}
-            </ul>
+            </div>
+
+            {/* Download Button */}
+            <div className="mt-16">
+              <a
+                href="/Aparna_T.pdf"
+                download
+                className="flex items-center justify-center gap-2 w-full rounded-lg bg-slate-900 py-4 text-white font-medium hover:bg-slate-800 transition"
+              >
+                <FiDownload size={18} />
+                Download CV
+              </a>
+            </div>
           </div>
-        )}
-      </nav>
-    </header>
+        </aside>
+      </div>
+    </>
   );
 }

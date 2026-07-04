@@ -2,13 +2,13 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="mx-auto min-h-screen max-w-7xl px-6 py-20"
+      className="mx-auto min-h-screen max-w-7xl px-8 py-20"
     >
       <p className="text-blue-600 font-semibold">
         EDUCATION
       </p>
 
-      <h2 className="mt-3 text-4xl font-bold md:text-5xl">
+      <h2 className="mt-3 text-5xl font-bold">
         Education
       </h2>
 

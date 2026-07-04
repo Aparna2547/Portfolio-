@@ -20,10 +20,13 @@ export default function HeroContent() {
       <h4 className="text-lg font-semibold text-gray-600 md:text-xl">React • Next.js • Node.js • TypeScript • MongoDB</h4>
 
       <p className="max-w-xl text-gray-500 leading-8">
-       Full Stack Software Engineer with 2+ years of experience building scalable web applications across healthcare and education domains. Experienced in React, Next.js, Node.js, Express, MongoDB, TypeScript, AWS, and GCP with a passion for building clean, responsive applications.
-      </p>
+Full-stack Software Engineer with 2+ years of experience building scalable web applications using React,
+Angular.js, Node.js, Typescript and MongoDB. Skilled in REST API development, responsive UI design, and cloud
+deployments on AWS and GCP. Delivered end-to-end features across health-tech and edu-tech platforms with
+secure payment integrations and real-time functionality. Collaborative team player with strong ownership and a
+consistent record of shipping clean, maintainable code.      </p>
 
-      <div className="flex flex-col gap-4 sm:flex-row">
+      {/* <div className="flex flex-col gap-4 sm:flex-row">
         <Link
           href="/projects"
           className="rounded-lg bg-black px-6 py-3 text-white transition hover:bg-gray-800"
@@ -38,7 +41,7 @@ export default function HeroContent() {
         >
           Download Resume
         </a>
-      </div>
+      </div> */}
           {/* Add ContactInfo here */}
       <ContactInfo />
       <SocialLinks />

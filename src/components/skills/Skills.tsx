@@ -3,7 +3,7 @@ const skillCategories = [
     id: 1,
     title: "Languages",
     color: "from-sky-500 to-blue-500",
-    skills: ["JavaScript", "TypeScript"],
+    skills: ["JavaScript", "TypeScript","Dart"],
   },
   {
     id: 2,
@@ -18,6 +18,7 @@ const skillCategories = [
       "CSS3",
       "Tailwind CSS",
       "Bootstrap",
+      "Reactstrap",
     ],
   },
   {
@@ -32,6 +33,7 @@ const skillCategories = [
       "Socket.IO",
       "Firebase Auth",
       "MVC",
+      "Clean Architecture",
     ],
   },
   {
@@ -56,6 +58,7 @@ const skillCategories = [
       "Git",
       "GitHub",
       "Bitbucket",
+      "GitLab",
     ],
   },
   {
@@ -64,6 +67,7 @@ const skillCategories = [
     color: "from-cyan-500 to-teal-500",
     skills: [
       "Postman",
+      "Hoppscotch",
       "VS Code",
       "Jira",
       "Agile",
@@ -82,15 +86,18 @@ export default function Skills() {
 
         <div className="text-center">
 
-          <span className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium">
+          <span className="rounded-full bg-gray-100 px-4 py-1 text-sm font-medium">
             Technical Skills
           </span>
 
-          <h2 className="mt-5 text-4xl font-bold md:text-5xl">
-            Technologies I Work With
-          </h2>
+        
 
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+ <div className="flex justify-center   font-bold md:text-5xl items-center w-full py-3">
+                    <p className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                          Technologies I Work With
+                    </p>
+                </div>
+          <p className="mx-auto mt-2 max-w-2xl text-gray-600">
             From frontend development to backend services,
             databases, cloud and DevOps.
           </p>

@@ -7,13 +7,18 @@ export default function Projects() {
       id="projects"
       className="mx-auto min-h-screen max-w-7xl px-6 py-20"
     >
-      <p className="text-blue-600 font-semibold">
-        PROJECTS
-      </p>
+      <div className="flex justify-center items-center w-full py-3">
+                    <span className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium">
+                        Projects
+                    </span>
+                </div>
 
-      <h2 className="mt-3 text-4xl font-bold md:text-5xl">
-        Featured Projects
-      </h2>
+                <div className="flex justify-center   font-bold md:text-5xl items-center w-full py-3">
+                    <p className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                         Featured Projects
+                    </p>
+                </div>
+
 
       <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
         {projects.map((project) => (
