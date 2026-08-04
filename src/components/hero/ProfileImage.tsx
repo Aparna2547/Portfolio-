@@ -6,7 +6,7 @@ export default function ProfileImage() {
       <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-teal-400 to-cyan-500 blur-2xl opacity-20"></div>
 
       <Image
-        src="/profile.jpg"
+        src="/profile.jpeg"
         alt="Aparna"
         width={200}
         height={200}
