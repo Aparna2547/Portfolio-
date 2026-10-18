@@ -1,35 +1,16 @@
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
-export default function Contact() {
+export default function ContactInfo() {
   return (
-    <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-
-      {/* Email */}
-      <div className="flex items-center gap-3 rounded-full border bg-white px-5 py-3 shadow-sm">
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100">
-          <MdEmail className="text-gray-600" />
-        </div>
-        <p className="font-medium break-all">
-          manikandanaparna18@gmail.com
-        </p>
+    <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+      <div className="flex items-center gap-2 text-sm text-text-secondary">
+        <MdEmail className="h-4 w-4 text-primary" />
+        <span>manikandanaparna18@gmail.com</span>
       </div>
-
-      {/* Phone */}
-      <div className="flex items-center gap-3 rounded-full border bg-white px-5 py-3 shadow-sm">
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100">
-          <MdPhone className="text-gray-600" />
-        </div>
-        <p className="font-medium">+91 7736982547</p>
+      <div className="flex items-center gap-2 text-sm text-text-secondary">
+        <MdLocationOn className="h-4 w-4 text-primary" />
+        <span>Bangalore, India</span>
       </div>
-
-      {/* Location */}
-      <div className="flex items-center gap-3 rounded-full border bg-white px-5 py-3 shadow-sm">
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-100">
-          <MdLocationOn className="text-gray-600" />
-        </div>
-        <p className="font-medium">Bangalore, India</p>
-      </div>
-
     </div>
   );
 }

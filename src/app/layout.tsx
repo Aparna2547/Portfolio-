@@ -15,8 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "My Portfolio",
+  title: "Aparna T | Full Stack Software Engineer",
+  description:
+    "Portfolio of Aparna T, Full Stack Software Engineer specializing in React, Next.js, Node.js, TypeScript, and MongoDB.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

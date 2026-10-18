@@ -21,8 +21,18 @@ export const projects: Project[] = [
     live: "#",
     image: "/projects/college.png",
   },
-  {
+    {
     id: 3,
+    title: "DEAR ME - Personal Routine & Expense Tracker",
+    description:
+      "A full-stack personal productivity and lifestyle web application for tracking daily routines, managing habits, and tracking financial expense records with secure JWT authentication.",
+    technologies: ["React", "Vite", "Node.js", "Express", "MongoDB", "Tailwind CSS", "JWT", "Cloudinary"],
+    github: "https://github.com/Aparna2547/dear-me-react",
+    live: "https://dear-me-react.vercel.app/",
+    image: "/projects/portfolio.png",
+  },
+  {
+    id: 4,
     title: "ELYSIAN BOOK - Virtual Beauty Parlour Booking Platform",
     description:
       "A full-stack beauty parlour booking platform with online appointments, real-time chat, secure payments, authentication, and location-based search.",
@@ -32,17 +42,18 @@ export const projects: Project[] = [
     image: "/projects/college.png",
   },
   {
-    id: 4,
+    id: 5,
     title: "SkinCharm - Beauty Products E-commerce Platform",
     description:
       "An e-commerce platform for beauty products featuring product browsing, secure online payments, image optimization, and cloud-based media storage.",
     technologies: ["JavaScript", "Node.js", "Express", "MongoDB", "Bootstrap", "Cloudinary", "Razorpay"],
     github: "https://github.com/Aparna2547/SkinCharm",
-    live: "#",
+    live: "https://skincharm.onrender.com/",
     image: "/projects/college.png",
   },
+  
   {
-    id: 5,
+    id: 6,
     title: "Personal Portfolio",
     description:
       "A responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS to showcase projects and skills.",
