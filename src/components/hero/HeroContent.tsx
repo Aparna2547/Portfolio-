@@ -21,7 +21,7 @@ export default function HeroContent() {
       </h4>
 
       <p className="max-w-xl text-gray-600 leading-8">
-        Full-stack Software Engineer with 2+ years of experience building scalable web
+        Full-stack Software Engineer with 3+ years of experience building scalable web
         applications using React, Node.js, TypeScript, and MongoDB. Skilled in REST API
         development, responsive UI design, and cloud deployments on AWS and GCP. Collaborative
         team player with a consistent record of shipping clean, maintainable code.
